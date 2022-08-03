@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap');
+
+
 .container {
   padding: 0;
 }
@@ -17,56 +21,68 @@
   width: 100%;
   height: 40em;
   max-height: 50em;
-  border: 1px dotted red;
 }
 
 .watermark {
-  border: 1px dotted rgb(0, 4, 255);
-  flex: 1 1 40%;
-  /* min-width: 25%; */
+  flex: 1 1 70%;
+  display: flex;
+}
+.watermarkIMG {
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/images/Untitled-2.png);
+  background-size:cover;
+  z-index: 1000;
+  margin-left: -25vw;
+  animation: slideIn 0.9s 0.3s ease forwards;
 }
 
 .welcomeTextCont {
   display: flex;
-  border: 1px dotted rgb(255, 0, 255);
   flex: 1 1 20%;
   justify-content: center;
-  /* min-width: 20%; */
+  color: white;
 }
 .welcomeText {
   text-align: center;
-  /* border: 1px dotted rgb(255, 0, 255); */
   padding-top: 15rem;
   font-size: 3rem;
   position: absolute;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  z-index:300;
+  padding-right: 3rem;
 }
 
 .lifter {
-  border: 1px dotted rgb(0, 255, 0);
-  flex: 1 1 40%;
+  flex: 1 1 60%;
   /* min-width: 30%; */
-}
-
-.navbar {
-  background: black;
+  background-image: url(../assets/images/bg1.png);
+  background-size: cover;
+  opacity: 0;
+  animation: fadein 1.4s ease forwards;
 }
 
 .BMIContainer {
-  border: 1px dotted rgb(255, 0, 0);
-  flex-basis: 90%;
+  flex-basis: 95%;
   z-index: 100;
   padding: 1rem;
+  margin-top: -2vw;
+  z-index: 1000;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  background-color: rgb(24, 24, 24);
 }
 
 .BMITextContainer {
-  border: 1px dotted rgb(0, 255, 0);
   flex: 1 1 40%
 }
 
 .BMIForm {
   display: flex;
   flex-wrap: wrap;
-  border: 1px dotted rgb(0, 255, 0);
   flex: 1 1 60%;
 }
 
@@ -78,11 +94,21 @@
 }
 
 .BMIComponent {
-  border: 1px dotted rgb(0, 17, 255);
   flex-basis: 100%;
   padding: 10px;
   flex: 1 1 33%;
   margin: 1rem;
+}
+
+.HiddenResult {
+  margin-top: 3rem;
+  width: 90%;
+  background-color: rgb(20, 20, 20);
+  padding: 1rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+  border: 2px solid rgb(21, 21, 21);
+  animation: swing-in-top-fwd 1s ease forwards;
 }
 
 .center {
@@ -92,8 +118,15 @@
 
 .CalculateBtn {
   position: absolute;
-  border: 1px dotted rgb(0, 17, 255);
   padding: 1em 2em 1em 2em;
+  border: 2px solid white;
+  border-radius: 1em 0 1em 0;
+  transition: 0.5s ease;
+}
+.CalculateBtn:hover{
+  background-color: rgba(212, 0, 0, 0.589);
+  border-radius: 0 1em 0 1em;
+  cursor:pointer;
 }
 
 .BMIBtnCont {
@@ -101,7 +134,6 @@
 }
 
 .Plans {
-  border: 1px dotted pink;
   min-height: 40rem;
   padding: 5em;
   flex-wrap: wrap;
@@ -109,11 +141,11 @@
 }
 
 .Plan {
-  border: 1px dotted green;
   min-width: 18em;
-  max-width: 19em;
+  max-width: 23em;
   min-height: 35em;
   flex-basis: 100%;
+  background-color: rgb(29, 29, 29) !important;
 }
 
 .Footer {
@@ -125,3 +157,72 @@
 .Footer > p {
   padding-top: 1em;
 }
+
+/* STYLING */
+.navbartext {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.drawer {
+  background-color: rgb(34, 34, 34);
+  color:white;
+}
+
+@media (max-width:600px) {
+	.watermarkIMG {
+    opacity: 0;
+  }
+}
+.btncont {
+  margin-top: 20vw;
+  display: flex;
+  justify-content: center;
+}
+
+.price {
+  font-size: 3rem;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.logo {
+  background-image: url(../assets/images/logo.png);
+  width: 8rem;
+  height: 5rem;
+  background-size: cover;
+}
+
+@keyframes swing-in-top-fwd {
+  0% {
+    -webkit-transform: rotateX(-100deg);
+            transform: rotateX(-100deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    margin-left: -25vw;
+  }
+  to {
+    margin-left: 0vw;
+  }
+}
+
+@keyframes fadein {
+  form {opacity: 0;}
+  to {opacity: 1};
+}
+

@@ -10,11 +10,11 @@ function Plans(){
         <section id={'Plans'}>
             <Container maxWidth="xm" className={`${styles.Plans} ${styles.flexcontainer}`}>
                 <Tilt options={{ scale: 1, max: 15 }} className={`${styles.Plan}`}>
-                <Container maxWidth="xs">
+                <Container maxWidth="xs" className={`${styles.Plan}`}>
                     <h2 className={styles.PlanTitle}>Basic Plan</h2>
                     <h4>Here Goes Some Description</h4>
                     <h5>For 1 Month</h5>
-                    <h1>$99</h1>
+                    <h1 className={styles.price}>$99</h1>
                     <ul>
                         <li>Free Hand</li>
                         <li>Gym Fitness</li>
@@ -22,7 +22,7 @@ function Plans(){
                         <li>Personal Trainer</li>
                     </ul>
                     <br/>
-                    <Button variant="outlined" color="primary">
+                    <Button variant="outlined" color="error">
                       Select Now
                     </Button>
 
@@ -33,7 +33,7 @@ function Plans(){
                     <h2 className={styles.PlanTitle}>Standart Plan</h2>
                     <h4>Here Goes Some Description</h4>
                     <h5>For 6 Months</h5>
-                    <h1>$149</h1>
+                    <h1 className={styles.price}>$149</h1>
                     <ul>
                         <li>Free Hand</li>
                         <li>Gym Fitness</li>
@@ -41,7 +41,7 @@ function Plans(){
                         <li>Personal Trainer</li>
                     </ul>
                     <br/>
-                    <Button variant="outlined" color="primary">
+                    <Button variant="outlined" color="error">
                       Select Now
                     </Button>
 
@@ -52,7 +52,7 @@ function Plans(){
                     <h2 className={styles.PlanTitle}>Ultimate Plan</h2>
                     <h4>Here Goes Some Description</h4>
                     <h5>For 1 Year</h5>
-                    <h1>$249</h1>
+                    <h1 className={styles.price}>$249</h1>
                     <ul>
                         <li>Free Hand</li>
                         <li>Gym Fitness</li>
@@ -60,7 +60,7 @@ function Plans(){
                         <li>Personal Trainer</li>
                     </ul>
                     <br/>
-                    <Button variant="outlined" color="primary">
+                    <Button variant="outlined" color="error">
                       Select Now
                     </Button>
 
